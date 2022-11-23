@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="UTF-8"> 
+    <title>
+     Details of Automobile
+    </title>
+   <style type="text/css">
+    label{
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 150px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+   </style>
+   <style>
+   body{
+    background-color: rgb(125, 202, 198);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 35%;
+  }
+  h1{
+   font-size: 30px;
+   color: rgb(240, 63, 9);
+   font-style: Bold;
+   text-align: center;
+   height: 80px;
+  }
+  h2{
+  font-size: 17px;
+  font-style: normal;
+  text-align: justify;
+  width: 1000px;
+  line-height: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 100px;
+  }
+  .outbox{
+    border: 2px solid white;
+    height: 200px;
+    width: 600px;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  .outbox input[type= 'submit']
+  {
+    background-color: rgb(74, 140, 202);
+    color: white;
+    height: 30px;
+    width: 80px;
+    margin-left: 270px;
+    margin-top: 30px; 
+  }
+  </style>
+  </head>
+  <body>
+    <h1>
+      Automobile Details Finder
+    </h1>
+    <h2>
+      This site provides the user with the details of the automobiles present with in the 50/100 miles of the user entered zip code of USA. The user needs to enter the zip code and also the mile either 50 or 100. After pressing the "Search" button, the details of the automobiles located within the particular mile of entered zip code will be displayed.
+    </p>
+    </h2>
+    <div class="outbox">
+      <form name="datapass" action="" method="POST">
+        <label>Enter the zipcode:</label>
+        <input type="text" name="zipcode" value={{request.form.zipcode}}><br>
+        <label>Enter the distance:</label>
+        <input type="text" name="distance" value={{request.form.distance}}><br>
+        <input type="submit" name="submit">
+      </form>
+    </div>
+  </body>
+</html>
